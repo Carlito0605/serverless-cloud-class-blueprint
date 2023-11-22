@@ -6,6 +6,8 @@ services:
     rootDir: webdis
     healthCheckPath: /
     plan: free
+    buildCommand: npm i
+    startCommand: npm run start
     envVars:
       - key: REDIS_HOST
         fromService:

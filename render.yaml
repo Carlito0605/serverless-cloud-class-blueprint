@@ -20,15 +20,4 @@ services:
 
 databases:
   # db 1
-  - name: staging
-  # db 2
-  - name: prod
-    region: frankfurt
-    plan: pro
-    databaseName: prod_app
-    user: app_user
-  # db 3
-  - name: private database
-    databaseName: private
-    ipAllowList: [] # only allow internal connections
-    postgresMajorVersion: 15
+  - name: db

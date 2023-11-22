@@ -21,3 +21,4 @@ services:
 databases:
   # db 1
   - name: db
+    plan: free

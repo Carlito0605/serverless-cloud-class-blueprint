@@ -3,13 +3,13 @@ services:
   - type: web
     name: webdis
     runtime: node
-    rootDir: webdis
-    healthCheckPath: /
     plan: free
     buildCommand: npm i
     startCommand: npm run start
+    region: frankfurt
 
 databases:
   # db 1
   - name: db
     plan: free
+    region: frankfurt

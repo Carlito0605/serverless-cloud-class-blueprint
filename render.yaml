@@ -1,15 +1,22 @@
 services:
   # A Docker web service
   - type: web
-    name: webdis
+    name: cloud-web
     runtime: node
     plan: free
+    branch: main
+    repo: https://github.com/Carlito0605/serverless-cloud-class-blueprint.git
     buildCommand: npm i
     startCommand: npm run start
     region: frankfurt
+    envVars:
+      - key: DB_URL
+        fromDatabase:
+          name: cloud-db
+          property: connectionString
 
 databases:
   # db 1
-  - name: db
+  - name: cloud-db
     plan: free
     region: frankfurt

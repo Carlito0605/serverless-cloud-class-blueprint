@@ -2,7 +2,7 @@ services:
   # A Docker web service
   - type: web
     name: webdis
-    runtime: docker
+    runtime: node
     rootDir: webdis
     healthCheckPath: /
     plan: free

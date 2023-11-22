@@ -5,6 +5,7 @@ services:
     runtime: docker
     rootDir: webdis
     healthCheckPath: /
+    plan: free
     envVars:
       - key: REDIS_HOST
         fromService:
